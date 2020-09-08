@@ -22,6 +22,9 @@ namespace NoNodeModulesIntellisense
                 app.UseDeveloperExceptionPage();
             }
 
+            // allows us to serve files from the node_modules folder
+            app.UseNodeModules();
+
             app.UseRouting();
 
             app.UseEndpoints(builder =>
